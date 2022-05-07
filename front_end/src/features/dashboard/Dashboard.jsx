@@ -50,6 +50,9 @@ import ForgotPassword from './../crm/jsx/pages/ForgotPassword';
 import Login from './../crm/jsx/pages/Login';
 import Home from './../crm/jsx/components/Dashboard/Home';
 
+
+import ReactChat from './../toolbox/chat-client/ReactChat';
+
 function Dashboard() {
   const [isVisible, setIsVisible] = React.useState(false);
 
@@ -131,6 +134,7 @@ function Dashboard() {
         <Route path="/industry/education" element={<IndustryEducation />} />
         <Route path="/industry/ecommerce" element={<IndustryEcommerce />} />
         <Route path="/industry/energy" element={<IndustryEnergy />} />
+        <Route path="/chat" element={<ReactChat />} />
 
         {/* !FAQ PRIVACY LOGIN REGISTER */}
         <Route path="/faq" element={<Faq />} />

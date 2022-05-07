@@ -9,6 +9,7 @@ import { selectAllIndustries } from '../industry/industriesSlice';
 import { selectAllTestimonials } from './../testimonials/testimonialsSlice';
 import ParticlesBg from 'particles-bg';
 import styles from './home.module.css';
+
 // !----------------------------------------------------------
 import career from './assets/img/career.jpg';
 import article1 from '../articles/assets/img/ntflx.png';
@@ -18,6 +19,7 @@ import article4 from '../articles/assets/img/startup.png';
 import BusinessModel from '../business/BusinessModel';
 import Team from '../team/Team';
 import ContactForm from './../common/contact-form/ContactForm';
+import ReactChat from '../../toolbox/chat-client/ReactChat';
 
 const Home = ({ homeProps }) => {
   const navigate = useNavigate();
@@ -69,7 +71,7 @@ const Home = ({ homeProps }) => {
 
   return (
     <main className={`mb-top-padding ${styles.main_padding} text-white `}>
-      <ParticlesBg type="cobweb" color='#3A6351' bg={true} num={800} />
+      <ParticlesBg type="cobweb" color="#3A6351" bg={true} num={800} />
       <div
         style={{
           position: 'relative',
@@ -80,6 +82,8 @@ const Home = ({ homeProps }) => {
         <div className="team-container">
           <Team />
         </div>
+
+        {/* <ReactChat /> */}
 
         <div className={`${styles.doing_business} text-white `}>
           <div className={`${styles.doing_business_box} text-white `}>
@@ -96,7 +100,7 @@ const Home = ({ homeProps }) => {
           <img src={career} alt="Home content description testimonials" />
           <div className={`${styles.carier_side2} text-white `}>
             <p>Karyera</p>
-            <h3 className='text-white'>Karyeranıza bizimlə başlayın</h3>
+            <h3 className="text-white">Karyeranıza bizimlə başlayın</h3>
             <p className="mb-text-justify mt-15">
               TWC-də məqsədimizin yeganə sütunu bizim{' '}
               <span className={`${styles.line_home_divider} text-white `}></span>
@@ -109,7 +113,8 @@ const Home = ({ homeProps }) => {
             <DefaultButton
               contentData={'Karyera'}
               handleNavigation={handleCarrerRouting}
-              classData={`button-detailed-dark ${styles.default_button_margin_top} ${styles.shadow_button} text-white `}            />
+              classData={`button-detailed-dark ${styles.default_button_margin_top} ${styles.shadow_button} text-white `}
+            />
 
             <div
               onClick={() => handleNavigation('/career')}
@@ -135,8 +140,8 @@ const Home = ({ homeProps }) => {
             <div className={`${styles.articles_card1} text-white `} onClick={() => handleNavigation('/ideas')}>
               <img src={article1} alt="think wise business articles" />
               <div className={`${styles.articles_card1_body} text-white `}>
-                <h1>NETFLIX | MƏQALƏ</h1>
-                <h2>
+                <h1 className={`${styles.article_header_title_date_color}`}>NETFLIX | MƏQALƏ</h1>
+                <h2 className={`${styles.article_header_title_date_color}`}>
                   Netflix biznes modelini <br /> necə dəyişdi...
                 </h2>
                 <p>
@@ -145,7 +150,7 @@ const Home = ({ homeProps }) => {
                   böyük subscription-əsaslı kontent izləmə oyunçusudur.
                 </p>
               </div>
-              <p>24 Avqust, 2021</p>
+              <p className={`${styles.article_header_title_date_color}`}>24 Avqust, 2021</p>
             </div>
 
             <div className={`${styles.articles_card2_container} text-white `}>
@@ -155,9 +160,9 @@ const Home = ({ homeProps }) => {
               >
                 <img src={article4} alt="think wise business articles" />
                 <div className={`${styles.articles_card2_body} text-white `}>
-                  <h2>STARTAP | MƏQALƏ</h2>
+                  <h2 className={`${styles.article_header_title_date_color}`}>STARTAP | MƏQALƏ</h2>
                   <p>Azərbaycanın startap ekosisteminin çətinliyi hansılardır?</p>
-                  <p>7 Sentyabr, 2021</p>
+                  <p className={`${styles.article_header_title_date_color}`}>7 Sentyabr, 2021</p>
                 </div>
               </div>
 
@@ -167,9 +172,9 @@ const Home = ({ homeProps }) => {
               >
                 <img src={article2} alt="think wise business articles" />
                 <div className={`${styles.articles_card2_body} text-white `}>
-                  <h2>ALKOQOL | MƏQALƏ</h2>
+                  <h2 className={`${styles.article_header_title_date_color}`}>ALKOQOL | MƏQALƏ</h2>
                   <p>Böyüyən qlobal industriya satışları istehlak dalğası üzərində deyil</p>
-                  <p>14 Oktyabr, 2021</p>
+                  <p className={`${styles.article_header_title_date_color}`}>14 Oktyabr, 2021</p>
                 </div>
               </div>
 
@@ -179,9 +184,9 @@ const Home = ({ homeProps }) => {
               >
                 <img src={article3} alt="Home content description testimonials" />
                 <div className={`${styles.articles_card2_body} text-white `}>
-                  <h2>KARQO | MƏQALƏ</h2>
+                  <h2 className={`${styles.article_header_title_date_color}`}>KARQO | MƏQALƏ</h2>
                   <p>Azərbaycanda karqo şirkətləri üzrə bazar araşdırması</p>
-                  <p>23 Dekabr, 2021</p>
+                  <p className={`${styles.article_header_title_date_color}`}>23 Dekabr, 2021</p>
                 </div>
               </div>
             </div>
@@ -190,7 +195,7 @@ const Home = ({ homeProps }) => {
 
         <div className={`${styles.client_projects} text-white `}>
           <p>PORTFOLİO</p>
-          <h2 className='text-white'>Müştəri layihələrimiz</h2>
+          <h2 className="text-white">Müştəri layihələrimiz</h2>
           <div className={`${styles.slide_dot} text-white `}>
             <div></div>
             <div></div>

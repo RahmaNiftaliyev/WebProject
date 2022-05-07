@@ -1,8 +1,9 @@
 import React from 'react';
-import { Form, FormGroup, Input, Button, Row, Col, Container } from 'reactstrap';
+import { Form, FormGroup, Button, Row, Col } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
 import styles from './../common.module.css';
 
-const ContactForm = ({ isBlackBG }) => {
+const ContactForm = ({ handleSubmit, isBlackBG, pristine, submitting }) => {
   return (
     <div className={`${styles.contact_us_container} ${isBlackBG ? styles.bg_dark_gradient : styles.bg_gradient}`}>
       <div>
@@ -12,68 +13,47 @@ const ContactForm = ({ isBlackBG }) => {
         </h3>
       </div>
       <div>
-        <Form className={`${styles.form_container}`}>
-          <Row className=''>
+        <Form className={`${styles.form_container}`} onSubmit={handleSubmit}>
+          <Row className="">
             <Col xs="6">
               <FormGroup>
-                <Input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  className="form-control"
-                  pattern="(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$"
-                  placeholder="Ad Soyad"
-                  required
-                />
+                <Field component="input" type="text" name="fullName" className="form-control" placeholder="Ad Soyad" />
               </FormGroup>
             </Col>
             <Col xs="6">
               <FormGroup>
-                <Input
-                  type="text"
-                  id="email"
-                  name="email"
-                  className="form-control"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-                  placeholder="Email Adres"
-                  required
-                />
+                <Field component="input" type="email" name="email" className="form-control" placeholder="Email Adres" />
               </FormGroup>
             </Col>
             <Col xs="6">
               <FormGroup>
-                <Input
-                  type="text"
-                  id="email-confirm"
+                <Field
+                  component="input"
+                  type="email"
                   name="email-confirm"
                   className="form-control"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                   placeholder="Email Adres Təkrar"
-                  required
                 />
               </FormGroup>
             </Col>
             <Col xs="6">
               <FormGroup>
-                <Input
+                <Field
+                  component="input"
                   type="text"
-                  id="title"
                   name="title"
                   className="form-control focus"
                   placeholder="Movzu başlığı"
-                  required
                 />
               </FormGroup>
             </Col>
             <Col xs="12">
               <FormGroup>
-                <Input
-                  type="textarea"
-                  id="message"
+                <Field
+                  component="textarea"
                   name="message"
                   className="form-control"
                   placeholder="Mesaj Mətniniz..."
-                  required
                   rows={8}
                   maxLength="500"
                 />
@@ -81,8 +61,8 @@ const ContactForm = ({ isBlackBG }) => {
             </Col>
             <Col xs="12">
               <FormGroup>
-                <Button type="submit" block>
-                  Elaqe
+                <Button type="submit" disabled={pristine || submitting}>
+                  Göndər
                 </Button>
               </FormGroup>
             </Col>
@@ -93,4 +73,6 @@ const ContactForm = ({ isBlackBG }) => {
   );
 };
 
-export default ContactForm;
+export default reduxForm({
+  form: 'contact'
+})(ContactForm);

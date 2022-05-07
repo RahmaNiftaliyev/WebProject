@@ -61,7 +61,6 @@ const Navigation = ({ logo, enable, textColor, bgColor, isArticle, isHeader, isP
   };
 
   const handleClickCrmLogin = () => {
-
     if (userPassword === secretkey) {
       navigate('/login');
     } else {
@@ -72,15 +71,12 @@ const Navigation = ({ logo, enable, textColor, bgColor, isArticle, isHeader, isP
 
   const renderedLinks = allLinks.map((link) => {
     return (
-      <li key={link.id}>
+      <li key={link.id} className={`${styles.padding_right_icon}`}>
         <Link
           className={`${styles.font_navigation_links} text-decoration-none relative  ${textColor} link-hover`}
           to={link.link}
         >
           {link.name}
-          <span className={`${styles.padding_right_icon}`}>
-            <GoTriangleRight className={`${styles.vertical_middle} `} />
-          </span>
           {link.hasSubmenu && (
             <div className="absolute z-index-100">
               <div
@@ -122,7 +118,7 @@ const Navigation = ({ logo, enable, textColor, bgColor, isArticle, isHeader, isP
           className={styles.navigation_logo_margin_right}
           onClick={handleNavigation}
         />
-        <ul className="mobile-display-none d-flex navigation-container">{renderedLinks}</ul>
+        <ul className="mobile-display-none d-flex navigation-container ps-0">{renderedLinks}</ul>
       </div>
       <div className="d-flex align-center">
         <button className="glow-on-hover" onClick={handleOpen}>

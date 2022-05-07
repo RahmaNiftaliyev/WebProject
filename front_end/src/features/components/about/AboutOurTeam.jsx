@@ -6,6 +6,7 @@ import ContactForm from './../common/contact-form/ContactForm';
 import { useSelector } from 'react-redux';
 import { selectAllMembers } from './aboutSlice';
 import { selectAllServices } from './../services/servicesSlice';
+import Team from './../team/Team'
 import styles from './about.module.css';
 import ParticlesBg from 'particles-bg';
 
@@ -27,6 +28,8 @@ const AboutOurTeam = () => {
           'The strength of the team is each individual member. The strength of each member is the team.'
         }
       />
+      <div style={{marginBottom:"150px"}}></div>
+      <Team />
       <ParticlesBg type="tadpole" bg={true} num={100} color="#3A6351" />
       <div className={`${styles.our_team} d-flex direction-column justify-center align-center`}>
         <div className={`${styles.container}`}>

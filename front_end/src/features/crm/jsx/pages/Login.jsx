@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './../../css/style.css';
-
-//
 import logo from '../../images/logo-2.png';
 import login from '../../images/bg-login2.png';
 import loginbg from '../../images/bg-login.jpg';
+import FacebookLogin from 'react-facebook-login';
+import { FaFacebookF } from 'react-icons/fa';
+
+const responseFacebook = (response) => {
+  console.log(response);
+};
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -35,12 +38,15 @@ const Login = (props) => {
     if (email === 'demo@example.com' && parseInt(password) === 123456) {
       navigate('/crm-home-page');
     }
-  }
-
+  };
 
   const handleRegisterRouting = () => {
-    navigate('/register');
-  }
+    navigate('/crm-home-page');
+  };
+
+  const componentClicked = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="login-main-page" style={{ backgroundImage: 'url(' + loginbg + ')' }}>
@@ -142,10 +148,19 @@ const Login = (props) => {
                             </div>
                           </div>
                         </div>
-                        <div className="text-center">
-                          <button type="submit" className="btn btn-primary btn-block">
+                        <div className="text-center d-flex justify-content-between">
+                          <button type="submit" className="btn btn-primary">
                             Daxil ol
                           </button>
+                          <FacebookLogin
+                            appId="565803394855210"
+                            autoLoad={false}
+                            fields="name,email,picture"
+                            onClick={componentClicked}
+                            callback={responseFacebook}
+                            cssClass="btn btn-primary"
+                            icon={<FaFacebookF />}
+                          />
                         </div>
                       </form>
                       <div className="new-account mt-2">

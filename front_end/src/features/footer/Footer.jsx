@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAllFooterLinks } from './footerSlice';
 import styles from './footer.module.css';
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaLocationArrow } from 'react-icons/fa';
-import { MdMarkEmailRead, MdAddCall } from 'react-icons/md';
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaLocationArrow, FaQuestionCircle } from 'react-icons/fa';
+import { MdMarkEmailRead, MdAddCall, MdPrivacyTip } from 'react-icons/md';
 import logo from './../components/common/assets/svg/navigation-black-logo.svg';
 
 const Footer = () => {
@@ -114,14 +114,24 @@ const Footer = () => {
                   <MdAddCall /> &nbsp; +994 12 488 68 19
                 </a>
               </p>
+              <p>
+                <Link to="/faq" className="text-reset">
+                    <FaQuestionCircle /> Faq
+                </Link>
+              </p>
+              <p>
+                <Link to="/privacy" className="text-reset">
+                    <MdPrivacyTip /> Gizlilik Siyasəti
+                </Link>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        <a className="text-reset fw-bold" href="mailto:info@rahmanniftaliyev.com" target="_blank">
-          Copyright © Designed &amp; Developed by senior developer Rahman Niftaliyev @info@rahmanniftaliyev.com 2022
+        <a className="text-reset fw-bold" target="_blank">
+          Copyright © Designed &amp; by designer Sabina Mammadova
         </a>
       </div>
     </footer>

@@ -1301,3 +1301,12 @@ input.text-area-placeholder-changer::placeholder {
         background-position: 0 0;
     }
 }
+
+.rcw-conversation-container > .rcw-header {
+    background-color: #8CB1EC;
+    color: white;
+  }
+  
+  .rcw-message > .rcw-response {
+    color: black;
+  }

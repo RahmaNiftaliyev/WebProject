@@ -141,7 +141,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         key={item.id}
         onClick={() => {
           setToggle((previousValue) => {
-            return !previousValue ? false : true;
+            return previousValue ? false : true;
           });
           setIdData(item.id);
         }}

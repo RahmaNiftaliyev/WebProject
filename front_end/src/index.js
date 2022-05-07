@@ -12,6 +12,7 @@ import 'animate.css/animate.min.css';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import 'animate.css';
 import './index.css';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const container = document.getElementById('root');
 
@@ -19,11 +20,17 @@ ReactDom.render(
   <Provider store={store}>
     <SimpleReactLightbox>
       <BrowserRouter>
-        <App />
+        <Auth0Provider
+          redirectUri={window.location.origin}
+          clientId="5S0HXMtHFgceIOTvlCs9kzE8dtMG2CfY"
+          domain="dev-0aerqulx.us.auth0.com"
+        >
+          <App />
+        </Auth0Provider>
       </BrowserRouter>
     </SimpleReactLightbox>
   </Provider>,
-  document.getElementById('root'),
+  container,
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

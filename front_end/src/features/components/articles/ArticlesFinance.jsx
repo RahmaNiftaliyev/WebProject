@@ -16,9 +16,6 @@ import relatedArticleImgPng from './assets/img/ntflx.png';
 import SearchForm from './SearchForm';
 import ParticlesBg from 'particles-bg';
 
-
-
-
 const ArticlesFinance = () => {
   const navigate = useNavigate();
   const handleNavigation = (paramsPath) => {
@@ -26,7 +23,7 @@ const ArticlesFinance = () => {
   };
   return (
     <div className={`text-white`}>
-       <ParticlesBg type={"tadpole"} bg={true} color={"#123499"} />
+      <ParticlesBg type={'tadpole'} bg={true} color={'#123499'} />
       <ArticleHeaderDash
         headerText="məqalələr/MALİYYƏ/Söhbət şİrkətlərİn özlərİnİ malİyyələşdİrməsİndən..."
         isArticle={true}
@@ -84,36 +81,36 @@ const ArticlesFinance = () => {
               gəldikdə, kapital daha yaxşıdır.
             </p>
             <p className="text-white">
-              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>riskdən</span> gedirsə, sual Lumberwood ASC-nin
-              likvidlik sıxıntısı çəksə belə faiz və əsas borcun ödəmə qabiliyyətindən gedir. Belə desək, borc nə qədər
-              yüksək olarsa, onu qaytara bilməmək, daha çox maliyyə sıxıntısı və iflas ehtimalı bir o qədər yüksəkdir
-              (həm də səhmdarlar və borc sahibləri üçün daha çox risk deməkdir). Buna görə də, riskə gəldikdə, kapital
-              daha yaxşıdır.
+              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>riskdən</span> gedirsə, sual Lumberwood
+              ASC-nin likvidlik sıxıntısı çəksə belə faiz və əsas borcun ödəmə qabiliyyətindən gedir. Belə desək, borc
+              nə qədər yüksək olarsa, onu qaytara bilməmək, daha çox maliyyə sıxıntısı və iflas ehtimalı bir o qədər
+              yüksəkdir (həm də səhmdarlar və borc sahibləri üçün daha çox risk deməkdir). Buna görə də, riskə gəldikdə,
+              kapital daha yaxşıdır.
             </p>
             <p className="text-white">
-              Əgər söhbət <span className={`${styles.bold_text}  text-white`}> mənfəətə olan təsirdən</span> gedirsə, mənfəətə vergi
-              müdafiəsi (tax shiel) və faiz ödənişləri təsir edir, buna görə də burada borcun artması ilə yaranan
-              vergidən əvvəlki ROA (aktivlərin gəlirliliyi) borclanma dərəcəsindən yüksəkdirsə, burada Lumberwood ASC
-              üçün borc kapitaldan daha yaxıdır, çünki borc ROE-ni (kapitalın gəlirliliyini artıracaq). Buna görə də,
-              mənfəətə olan təsirə gəldikdə, borc daha yaxşıdır.
+              Əgər söhbət <span className={`${styles.bold_text}  text-white`}> mənfəətə olan təsirdən</span> gedirsə,
+              mənfəətə vergi müdafiəsi (tax shiel) və faiz ödənişləri təsir edir, buna görə də burada borcun artması ilə
+              yaranan vergidən əvvəlki ROA (aktivlərin gəlirliliyi) borclanma dərəcəsindən yüksəkdirsə, burada
+              Lumberwood ASC üçün borc kapitaldan daha yaxıdır, çünki borc ROE-ni (kapitalın gəlirliliyini artıracaq).
+              Buna görə də, mənfəətə olan təsirə gəldikdə, borc daha yaxşıdır.
             </p>
             <p className="text-white">
-              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>nəzarətdən</span> gedirsə, icraçı direktor əlavə
-              səhmlərin buraxılışından yaranacaq mülkiyyət azalmasının şirkətdə qərarların qəbul edilməsinə necə təsir
-              edəcəyini nəzərə almalıdır. Əgər icraçı direktor yeni səhmdarların mövcudluğu ideyasına müsbət baxmırsa,
-              oz zaman o şəxsi vəsaitlərindən istifadə edərək Lumberwood ASC-yə olan riskini artıra bilər. Buna görə də,
-              nəzarətə gəldikdə, borc daha yaxşıdır.
+              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>nəzarətdən</span> gedirsə, icraçı direktor
+              əlavə səhmlərin buraxılışından yaranacaq mülkiyyət azalmasının şirkətdə qərarların qəbul edilməsinə necə
+              təsir edəcəyini nəzərə almalıdır. Əgər icraçı direktor yeni səhmdarların mövcudluğu ideyasına müsbət
+              baxmırsa, oz zaman o şəxsi vəsaitlərindən istifadə edərək Lumberwood ASC-yə olan riskini artıra bilər.
+              Buna görə də, nəzarətə gəldikdə, borc daha yaxşıdır.
             </p>
             <p className="text-white">
-              Əgər söhbət <span className={`${styles.bold_text}  text-white`}> zamanlamadan</span> gedirsə, o zaman icraçı diektor
-              bu suallara cavab verməlidir; kapital bazarları (borc və səhm bazarı) “mehribandırmı”? Faiz dərəcələri
-              yüksək yoxsa aşağıdır, və ya hansı istiqamətə yönəlir? Lumberwood ASC-nin səhm buraxması üçün yaxşı
-              vaxtdırmı? Buna görə də, zamanlamaya gəldikdə, bu tamamilə kapital bazarlarının isti və ya soyuq
+              Əgər söhbət <span className={`${styles.bold_text}  text-white`}> zamanlamadan</span> gedirsə, o zaman
+              icraçı diektor bu suallara cavab verməlidir; kapital bazarları (borc və səhm bazarı) “mehribandırmı”? Faiz
+              dərəcələri yüksək yoxsa aşağıdır, və ya hansı istiqamətə yönəlir? Lumberwood ASC-nin səhm buraxması üçün
+              yaxşı vaxtdırmı? Buna görə də, zamanlamaya gəldikdə, bu tamamilə kapital bazarlarının isti və ya soyuq
               olmasından asılıdır.
             </p>
             <p className="text-white">
-              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>başqa amillərdən </span> gedirsə, o zaman biz icraçı
-              dirketor və digər səhmdarların borclara münasibətini bilməliyik. Doğrudur ki, borc menencement
+              Əgər söhbət <span className={`${styles.bold_text}  text-white`}>başqa amillərdən </span> gedirsə, o zaman
+              biz icraçı dirketor və digər səhmdarların borclara münasibətini bilməliyik. Doğrudur ki, borc menencement
               komandasının əvvəlkindən daha yaxşı işləməsi üçün nizam-intizam rolu var, lakin borcun səhmlərin
               reytinqinə necə təsir edəcəyini bilmək vacibdir.
             </p>
@@ -136,19 +133,6 @@ const ArticlesFinance = () => {
           </div>
         </section>
         <section className={`${styles.aside_container}  text-white`}>
-          <div className={`${styles.aside_box} d-flex direction-column `} onClick={() => handleNavigation('/ideas')}>
-            <img className={`${styles.aside_box_img}  text-white`} src={relatedArticleImgPng} alt="" />
-            <p className={`${styles.aside_box_title}  text-white`}>
-              <span className={`${styles.aside_article_name}  text-white`}>Netflix </span> / Fikirlər
-            </p>
-            <p className={`${styles.aside_box_desc}  text-white`}>Netflix biznes modelini necə dəyişdi</p>
-            <div className={`${styles.aside_box_icons}  text-white`}>
-              {' '}
-              <ImLinkedin2 className={`${styles.social_media_icon} nav-icon-margin-right`} />
-              <ImFacebook className={` ${styles.social_media_icon} nav-icon-margin-right`} />
-              <SiInstagram className={`${styles.social_media_icon}  text-white`} />
-            </div>
-          </div>
           <div className={`${styles.aside_latest_articles}  text-white`}>
             <p className={`${styles.aside_latest_articles_title}  text-white`}>Ən son məqalələr</p>
             <div
@@ -168,7 +152,9 @@ const ArticlesFinance = () => {
               <img className={`${styles.aside_latest_articles_img}  text-white`} src={articleImgPng2} alt="" />
               <div className={`${styles.aside_latest_articles_info_box} d-flex direction-column`}>
                 <p className={`${styles.aside_latest_articles_date}  text-white`}>14.10.2021</p>
-                <p className={`${styles.aside_latest_articles_desc}  text-white`}>Böyüyən qlobal industriya satışları...</p>
+                <p className={`${styles.aside_latest_articles_desc}  text-white`}>
+                  Böyüyən qlobal industriya satışları...
+                </p>
               </div>
             </div>
             <div
